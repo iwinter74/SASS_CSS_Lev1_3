@@ -1,0 +1,35 @@
+@mixin form {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black
+}
+@mixin my-animation {
+    animation: balls 2s ease infinite;
+}
+@keyframes balls {
+    0%, 100% {
+        margin-left: 0
+    }
+    50% {
+        margin-right:0;
+        margin-left: auto;
+    }
+}
+.ball1 {
+    @include form();
+    @include my-animation();
+    background-color: red;
+}
+.ball2 {
+    @include form();
+    @include my-animation();
+    background-color: blue;
+    animation-delay: 0.5s
+}
+.ball3{
+    @include form();
+    @include my-animation();
+    background-color: yellow;
+    animation-delay: 1s
+}
